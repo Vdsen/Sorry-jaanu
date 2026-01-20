@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincere Sorry - For Anshika</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fff5f7;
+            scroll-behavior: smooth;
+        }
+        .handwritten {
+            font-family: 'Dancing Script', cursive;
+        }
+        .card-gradient {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(251, 113, 133, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        .highlight-box {
+            border-left: 5px solid #f43f5e;
+            background: #fff1f2;
+        }
+        .floating-emoji {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Hero Section -->
+    <header class="min-h-[60vh] flex flex-col items-center justify-center p-6 text-center">
+        <div class="animate-bounce mb-4 text-5xl">💝</div>
+        <h1 class="text-4xl md:text-5xl font-bold text-rose-600 mb-2">I'm Sorry, Anshika</h1>
+        <p class="text-gray-500 italic max-w-sm">Mujhe pta hai exams ke beech me tumhara mood kharab karna bahut galat tha...</p>
+        <div class="mt-8 animate-pulse text-rose-400 text-sm">Niche dekho... (Scroll Down)</div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 space-y-12">
+
+        <!-- Section 1: The Night & Morning -->
+        <div class="card-gradient p-8 rounded-3xl">
+            <h3 class="text-rose-500 font-bold text-xl mb-4 flex items-center gap-2">
+                🌙 Raat ki Baat
+            </h3>
+            <p class="text-gray-700 leading-relaxed">
+                Raat ko tum akele jag ke padh rahi thi aur me so gaya... Mujhe pta hai tumhe support ki zaroorat thi. Subah bhi bas ek formal "Best of Luck" bolke chala gaya, jabki mujhe ruk kar tumse baat karni chahiye thi. I'm really sorry for being so insensitive.
+            </p>
+        </div>
+
+        <!-- Section 2: The School Taunt -->
+        <div class="card-gradient p-8 rounded-3xl">
+            <h3 class="text-rose-500 font-bold text-xl mb-4 flex items-center gap-2">
+                🏫 School se aane ke baad
+            </h3>
+            <p class="text-gray-700 leading-relaxed">
+                School se aakar mujhe tumse maafi maangni chahiye thi, par maine ulta tumhe taunt maare... (Jiska naam maine kasam khai hai ki ab kabhi nahi lunga). Tum exams ke stress me thi aur maine apni rudeness se sab bigad diya. I feel terrible for hurting you.
+            </p>
+            <div class="mt-4 p-3 bg-rose-50 rounded-xl border border-rose-100 italic text-rose-600 text-sm">
+                "Ab se kabhi bhi faltu taunts nahi marunga, Promise."
+            </div>
+        </div>
+
+        <!-- Section 3: The Truth about "Comfort" -->
+        <div class="card-gradient p-8 rounded-3xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl">💬</div>
+            <h3 class="text-rose-500 font-bold text-xl mb-4">I Am Comfortable With You</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Tumhe lag raha hai ki me comfortable nahi hu, par sach ye hai ki me tumhare saath sabse zyada "Me" hota hu. Aaj call bhi karne wala tha, par didi ne ghar pe tamasha kar diya.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Mwra personal life abhi itni kharab chal rahi hai ki me bata bhi nahi sakta, par please ye mat socho ki me tumse door ho raha hu. Me sab share karna chahta hu, bas abhi thoda waqt mushkil hai.
+            </p>
+        </div>
+
+        <!-- Section 4: THE BIG PROMISE (Highlighted) -->
+        <div class="highlight-box p-8 rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform">
+            <h2 class="handwritten text-3xl text-rose-600 mb-6">My Promise To You</h2>
+            <div class="space-y-4">
+                <div class="flex gap-3">
+                    <span class="text-rose-500 font-bold">✓</span>
+                    <p class="font-semibold text-gray-800 text-lg">I'll try to understand you better and what's hurting you.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-rose-500 font-bold">✓</span>
+                    <p class="font-semibold text-gray-800 text-lg">Always try to become better from what I'm now.</p>
+                </div>
+                <div class="flex gap-3">
+                    <span class="text-rose-500 font-bold">✓</span>
+                    <p class="font-semibold text-gray-800 text-lg italic">I'll always try to become your safe spot where you can overshare 😭</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Stress Buster -->
+        <div class="card-gradient p-8 rounded-3xl text-center">
+            <h3 class="text-rose-500 font-bold mb-4">Stress Buster: Pop your anger!</h3>
+            <div id="game-area" class="h-48 w-full bg-rose-50 rounded-2xl relative overflow-hidden cursor-crosshair border border-rose-100">
+                <div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none text-rose-300 font-bold">TAP TO POP</div>
+            </div>
+        </div>
+
+        <!-- Final Decision -->
+        <div class="text-center py-10">
+            <h2 class="text-2xl font-bold mb-6">Please Forgive Me? 🙏</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button onclick="forgive()" class="px-10 py-4 bg-rose-500 text-white rounded-full font-bold shadow-lg hover:bg-rose-600 transition-all w-full sm:w-auto">Haan, Maaf Kiya</button>
+                <button onmouseover="moveBtn(this)" id="noBtn" class="px-10 py-4 border-2 border-rose-300 text-rose-400 rounded-full font-bold transition-all w-full sm:w-auto">Nahi, Abhi Bhi Gussa hu</button>
+            </div>
+            <p class="mt-8 text-sm text-gray-400">P.S. All the best for your next paper! You're going to crush it. ✨</p>
+        </div>
+
+    </main>
+
+    <!-- Modal Success -->
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden z-[200] flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white p-8 rounded-3xl max-w-sm w-full text-center shadow-2xl">
+            <div class="text-6xl mb-4">✨</div>
+            <h3 class="text-2xl font-bold text-rose-600 mb-2">Thank You, Anshika!</h3>
+            <p class="text-gray-600 mb-6">Ab jaao, bina kisi tension ke padhai karo. Exams ke baad dher saari baatein karenge. All the very best! ❤️</p>
+            <button onclick="closeModal()" class="w-full py-3 bg-rose-500 text-white rounded-xl font-bold">Good Luck!</button>
+        </div>
+    </div>
+
+    <script>
+        function moveBtn(btn) {
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth - 20);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight - 20);
+            btn.style.position = 'fixed';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+            btn.style.zIndex = '1000';
+            btn.innerText = "Nahi pakad paogi! 😂";
+        }
+
+        function forgive() {
+            document.getElementById('modal').classList.remove('hidden');
+            for(let i=0; i<30; i++) setTimeout(spawnEmoji, i * 100);
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function spawnEmoji() {
+            const emojis = ['❤️', '💖', '📚', '🌸', '✨'];
+            const e = document.createElement('div');
+            e.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            e.className = 'floating-emoji text-3xl';
+            e.style.left = Math.random() * 100 + 'vw';
+            e.style.bottom = '-50px';
+            document.body.appendChild(e);
+
+            gsap.to(e, {
+                y: -window.innerHeight - 100,
+                x: (Math.random() - 0.5) * 200,
+                rotation: Math.random() * 360,
+                duration: 2 + Math.random() * 2,
+                ease: "power1.out",
+                onComplete: () => e.remove()
+            });
+        }
+
+        const gameArea = document.getElementById('game-area');
+        const gameEmojis = ['📖', '✏️', '🔥', '💢', '❌'];
+        
+        function spawnGameEmoji() {
+            const target = document.createElement('div');
+            target.innerText = gameEmojis[Math.floor(Math.random() * gameEmojis.length)];
+            target.className = 'absolute cursor-pointer text-2xl select-none p-2';
+            target.style.left = Math.random() * 85 + '%';
+            target.style.top = Math.random() * 85 + '%';
+            
+            target.onclick = () => {
+                gsap.to(target, { scale: 0, opacity: 0, duration: 0.2, onComplete: () => target.remove() });
+                spawnGameEmoji();
+            };
+            
+            gameArea.appendChild(target);
+            setTimeout(() => { if(target.parentElement) target.remove(); }, 2500);
+        }
+
+        setInterval(() => {
+            if(gameArea.children.length < 6) spawnGameEmoji();
+        }, 1000);
+    </script>
+</body>
+      </html>
